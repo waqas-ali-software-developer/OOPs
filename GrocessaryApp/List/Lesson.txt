@@ -1,0 +1,39 @@
+﻿/* List
+ * There is no fixed length for list
+ * List is generic type
+ */
+List<int> integers = new List<int>();
+integers.Add(1);//0
+integers.Add(2);
+integers.Add(3);
+integers.Add(4); 
+integers.Add(5);//4
+
+List<int> integers2 = new List<int>();
+integers2.Add(6);
+integers2.Add(7);
+integers2.Add(8);
+integers2.Add(9);
+
+integers.AddRange(integers2);
+//
+//bool resutl = integers.Remove(5);
+//integers.RemoveAt(10);
+bool resutl = integers.Contains(61);
+bool resutl2 = integers.Contains(62);
+
+
+for ( int index= 0; index < integers.Count; index = index+1)
+{
+    if (integers.Contains(60))
+    {
+        Console.WriteLine(integers[index]);
+    }
+    else { 
+    
+    }
+}
+//Output
+// 
+
+Console.ReadKey();

@@ -1,0 +1,200 @@
+﻿/*
+ * 
+ * Dictionary is a generic collection 
+ * Dictionary is a key value pair
+ * Key should be unique
+ */
+
+
+using System;
+using System.Net;
+using System.Security.Cryptography;
+
+Dictionary<string, int> employees = new Dictionary<string, int>();
+employees.Add("John", 1000);
+employees.Add("Smit", 3000);
+employees.Add("Troy", 1000);
+employees.Add("Ronaldo", 5000);
+
+
+Dictionary<int, string> dictionaryOfStudents = new Dictionary<int, string>();
+dictionaryOfStudents.Add(2, "John");
+dictionaryOfStudents.Add(10, "Smith");
+dictionaryOfStudents.Add(1, "Tom");
+dictionaryOfStudents.Add(11, "Smith");
+
+
+Console.Write("Please enter key ");
+int key = Convert.ToInt32(Console.ReadLine());
+
+bool flag = dictionaryOfStudents.ContainsKey(key);
+if (flag)
+{//enter when condition will be true
+    Console.WriteLine("Key is already exist in student dictionary");
+}
+else
+{
+    Console.Write("Please enter value ");
+    string value = Console.ReadLine();
+    dictionaryOfStudents.Add(key, value);
+    Console.WriteLine("Record is successfully added into the student dictionary");
+}
+
+int test = 0;
+
+Console.WriteLine("-----------*****Students*******-----------");
+foreach(KeyValuePair<int, string> student in dictionaryOfStudents)
+{
+    Console.WriteLine($"RollNo = {student.Key} and Name = {student.Value}");
+}
+/*
+Console.WriteLine("-----------*****Employees*******-----------");
+foreach(KeyValuePair<string, int> employee in employees)
+{
+    Console.WriteLine($" EmployeeName = {employee.Key} and Salary ={employee.Value}");
+
+}*/
+
+
+
+
+/*
+Console.WriteLine("-----------******Cars Data******-----------");
+List<string> cars = new List<string>();
+cars.Add("Kia");
+cars.Add("Honda");
+cars.Add("Toyota");
+cars.Add("Fortuner");
+
+foreach(string car in cars)
+{
+    Console.WriteLine(car);
+}
+
+
+
+foreach (int number in numbers)
+{
+    Console.WriteLine(number);
+}*/
+
+
+/*
+Console.WriteLine(dictionaryOfStudents[10]);//Smith
+
+Console.WriteLine(dictionaryOfStudents[1]);//Tom
+//--------------
+Console.WriteLine(employess["Troy"]);//1000
+Console.WriteLine(employess["Ronaldo"]);//5000
+*/
+
+/*
+ * for(int index=0; index<10; index = index + 1)
+ * {
+ * true
+ * }
+ * 
+ * foreach(string item in items)// true
+ * {
+ * true
+ * }
+ */
+List<int> numbers = new List<int>();
+numbers.Add(10);
+numbers.Add(1);
+numbers.Add(5);
+numbers.Add(6);
+
+int index = 0;
+while(index < numbers.Count)
+{
+    Console.WriteLine(numbers[index]);
+    index = index + 1;
+}
+
+
+
+
+int i = 0;
+Console.ReadKey();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Vehicle corollaCar = new Car();
+//corollaCar.GetWheels();
+//corollaCar.GetCarColor();//white 
+
+//Vehicle rickshaw = new Rickshaw();
+//rickshaw.GetWheels();
+//rickshaw.GetCarColor();// Blue
+
+
+
+
+
+
+/*
+//We can not create a instance of a class (object)
+PartTimeEmployee employeePartTime = new PartTimeEmployee();
+employeePartTime.Name = "partime employee";
+employeePartTime.Id = 2;
+employeePartTime.Country = "UK";
+employeePartTime.GetEmployeeDetail();
+
+FullTimeEmployee employeeFullTime = new FullTimeEmployee();
+employeeFullTime.Name = "fulltime employee";
+employeeFullTime.Id = 11;
+employeeFullTime.Country = "Canada";
+employeeFullTime.GetEmployeeDetail();*/
+
